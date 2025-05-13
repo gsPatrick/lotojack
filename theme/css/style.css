@@ -1,9 +1,3 @@
-/**
- * WEBSITE: https://themefisher.com
- * TWITTER: https://twitter.com/themefisher
- * FACEBOOK: https://www.facebook.com/themefisher
- * GITHUB: https://github.com/themefisher/
- */
 
 /*=== MEDIA QUERY ===*/
 @import url("https://fonts.googleapis.com/css?family=Lora:400,400i|Open+Sans:300,400,600,700,800");
@@ -14,7 +8,7 @@ body {
 
 h1, h2, h3, h4, h5, h6 {
   font-family: "Open Sans", sans-serif;
-  color: #000;
+  color: #f5e8c5;
   font-weight: 300;
 }
 
@@ -37,7 +31,7 @@ p, li, blockquote, label {
   font-size: 16px;
   letter-spacing: 0;
   line-height: 25px;
-  color: #808080;
+  color: #999999;
   margin-bottom: 0;
 }
 
@@ -142,8 +136,9 @@ a:hover {
 }
 
 .bg-1 {
-  background: url(../images/background/promo-video-back.jpg) fixed no-repeat;
+  background: url(../images/background/loto.png) fixed no-repeat;
   background-size: cover;
+  background-position: center;
 }
 
 .bg-coming-soon {
@@ -396,7 +391,7 @@ button:focus,
 }
 .main-nav .navbar-nav .nav-item.active .nav-link:before {
   content: "";
-  background: #2e7eed;
+  background: #f5e8c5;
   width: 60%;
   height: 2px;
   position: absolute;
@@ -454,7 +449,7 @@ button:focus,
 }
 .main-nav .dropdown .dropdown-menu .dropdown-item.active, .main-nav .dropdown .dropdown-menu .dropdown-item.focus, .main-nav .dropdown .dropdown-menu .dropdown-item:focus, .main-nav .dropdown .dropdown-menu .dropdown-item:hover {
   background-color: transparent;
-  color: #2e7eed;
+  color: #f5e8c5;
 }
 .main-nav .dropdown .dropdown-menu li:first-child {
   margin-top: 10px;
@@ -481,7 +476,7 @@ button:focus,
 
 .dropdown-submenu.active > a,
 .dropdown-submenu:hover > a {
-  color: #2e7eed;
+  color: #f5e8c5;
 }
 
 .dropleft .dropdown-menu,
@@ -609,7 +604,8 @@ button:focus,
   height: 40px;
   line-height: 40px;
   text-align: center;
-  background: #2e7eed;
+  background-image: linear-gradient(90deg, #3e372c, #eeece1);
+  border-radius: 50%;
   color: #fff;
   transition: 0.3s;
   z-index: 999556;
@@ -617,7 +613,8 @@ button:focus,
   display: none;
 }
 .scroll-top-to:hover {
-  background: #333;
+  
+  transform: scale(1.2);
 }
 @media (max-width: 768px) {
   .scroll-top-to {
@@ -951,10 +948,10 @@ button:focus,
 .video-promo .content-block a i.video {
   height: 125px;
   width: 125px;
-  background: #2e7eed;
+  background: #f5e8c5;
   display: inline-block;
-  font-size: 40px;
-  color: #fff;
+  font-size: 60px;
+  color: #333;
   text-align: center;
   line-height: 125px;
   border-radius: 100%;
@@ -1021,11 +1018,18 @@ button:focus,
   width: 200%;
   height: 200%;
   border-radius: 50%;
-  background-image: linear-gradient(45deg, #009EC5 0%, #2e7eed 20%, #02225B 50%);
+  background: linear-gradient(90deg, #2c2c2c 0%, #2c2c2c 49%, #2c2c2c 51%, #999999 70%);
 }
 
 .pull-top {
   margin-top: -100px;
+}
+.bg-dourado{
+  background-color: #f5e8c5;
+}
+
+.bg-marrom{
+  background-color: #333;
 }
 
 .shapes-container {
@@ -1044,8 +1048,8 @@ button:focus,
   top: 0;
   bottom: 0;
   left: 0;
-  right: 0;
-  background-color: rgba(255, 255, 255, 0.1);
+  right: 0;  
+  background-color: rgb(203, 187, 136, 0.5);
   transform: rotate(-35deg);
   position: absolute;
   border-radius: 50px;
@@ -1150,7 +1154,7 @@ button:focus,
 .zindex-1 {
   z-index: 1;
 }
-
+/*
 hr {
   display: block;
   height: 2px;
@@ -1158,7 +1162,7 @@ hr {
   border-top: 2px solid #2e7eed;
   margin: 1em 0;
   padding: 0;
-}
+}*/
 
 .icon-box {
   height: 80px;
@@ -1891,3 +1895,479 @@ hr {
   }
 }
 /*# sourceMappingURL=style.css.map */
+
+.borda {
+  border: 4px solid;
+  border-image: linear-gradient(90deg, #3e372c, #eeece1) 1;
+  border-radius: 0px; /* ou o mesmo valor de .rounded, se precisar */
+}
+
+
+
+.label {
+  background-color: transparent;
+  border: 2px solid #453c2a;
+  display: flex;
+  align-items: center;
+  border-radius: 50px;
+  width: 160px;
+  cursor: pointer;
+  transition: all 0.4s ease;
+  padding: 5px;
+  position: relative;
+}
+label:hover {
+  transform: scale(1.2); /* Aumenta o tamanho do label em 20% */
+}
+
+
+
+.label::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #fff;
+  width: 8px;
+  height: 8px;
+  transition: all 0.4s ease;
+  border-radius: 100%;
+  margin: auto;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.label .input {
+  display: none;
+}
+
+.label .title {
+  font-size: 17px;
+  color: #fff;
+  transition: all 0.4s ease;
+  position: absolute;
+  right: 18px;
+  bottom: 14px;
+  text-align: center;
+}
+
+.label .title.text-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px; /* Adiciona um espaço entre o ícone e o texto */
+}
+
+.label .title:last-child {
+  opacity: 0;
+  visibility: hidden;
+  position: absolute;
+  bottom: 14px;
+  left: 50%;
+  color: rgb(35, 174, 35);
+  transform: translateX(-50%);
+  text-align: center;
+}
+
+
+.label .circle {
+  height: 45px;
+  width: 45px;
+  border-radius: 50%;
+  background-color: #999999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.4s ease;
+  position: relative;
+  box-shadow: 0 0 0 0 rgb(255, 255, 255);
+  overflow: hidden;
+}
+
+.label .circle .icon {
+  color: #fff;
+  width: 30px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: all 0.4s ease;
+}
+
+.label .circle .square {
+  aspect-ratio: 1;
+  width: 15px;
+  border-radius: 2px;
+  background-color: #fff;
+  opacity: 0;
+  visibility: hidden;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: all 0.4s ease;
+}
+
+.label .circle::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  background-color: #f5e8c5;
+  width: 100%;
+  height: 0;
+  transition: all 0.4s ease;
+}
+
+.label:has(.input:checked) {
+  width: 57px;
+  animation: installed 0.4s ease 3.5s forwards;
+}
+
+.label:has(.input:checked)::before {
+  animation: rotate 3s ease-in-out 0.4s forwards;
+}
+
+.label .input:checked + .circle {
+  animation:
+    pulse 1s forwards,
+    circleDelete 0.2s ease 3.5s forwards;
+  rotate: 180deg;
+}
+
+.label .input:checked + .circle::before {
+  animation: installing 3s ease-in-out forwards;
+}
+
+.label .input:checked + .circle .icon {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.label .input:checked ~ .circle .square {
+  opacity: 1;
+  visibility: visible;
+}
+
+.label .input:checked ~ .title {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.label .input:checked ~ .title:last-child {
+  animation: showInstalledMessage 0.4s ease 3.5s forwards;
+}
+
+@keyframes pulse {
+  0% {
+    scale: 0.95;
+    box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.7);
+  }
+  70% {
+    scale: 1;
+    box-shadow: 0 0 0 16px rgba(255, 255, 255, 0);
+  }
+  100% {
+    scale: 0.95;
+    box-shadow: 0 0 0 0 rgba(255, 255, 255, 0);
+  }
+}
+
+@keyframes installing {
+  from {
+    height: 0;
+  }
+  to {
+    height: 100%;
+  }
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(-90deg) translate(27px) rotate(0);
+    opacity: 1;
+    visibility: visible;
+  }
+  99% {
+    transform: rotate(270deg) translate(27px) rotate(270deg);
+    opacity: 1;
+    visibility: visible;
+  }
+  100% {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+@keyframes installed {
+  100% {
+    width: 150px;
+    border-color: rgb(35, 174, 35);
+  }
+}
+
+@keyframes circleDelete {
+  100% {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+@keyframes showInstalledMessage {
+  100% {
+    opacity: 1;
+    visibility: visible;
+    right: 56px;
+  }
+}
+
+
+
+.navbar-nav .nav-item.active > .nav-link,
+.navbar-nav .nav-item .dropdown-menu .dropdown-item.active {
+    color: green !important;
+}
+
+.navbar-nav .nav-item .nav-link {
+  color: white !important; /* branco para todos */
+}
+
+.navbar-nav .nav-item.active > .nav-link {
+  color: green !important; /* verde só para o ativo */
+}
+
+
+.img-passo{
+  width: 200px;
+  height: auto;
+  border-radius: 20px;
+
+}
+
+.hr-passo {
+  
+  border: 0;
+  border-top: 8px solid;
+  border-image: linear-gradient(90deg, #3e372c, #eeece1) 1;
+  border-radius: 10px;
+}
+.hr-passo1 {
+  
+  border: 0;
+  border-top: 3px solid;
+  border-image: linear-gradient(90deg, #3e372c, #eeece1) 1;
+  border-radius: 10px;
+}
+
+.bg-gradient{
+
+  background-image: linear-gradient(90deg, #3e372c, #eeece1 );
+ 
+}
+
+
+
+.p-gold{
+color:#333;
+font-size: 20px;
+}
+
+ 
+
+  .logo-link {
+    color: #f5e8c5;
+    text-decoration: none;
+  
+    display: inline-block;
+  }
+
+  .logo-link:hover {
+    color: #f5e8c5;
+  
+  }
+
+  .logo-flex {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    flex-wrap: wrap; /* Responsivo */
+    justify-content: center;
+  }
+
+  .logo-text {
+    font-size: 2rem;
+    font-weight: bold;
+    white-space: nowrap;
+    font-size: 70px;
+    color: #f5e8c5;
+  }
+
+  .logo-container {
+    position: relative;
+    transition: transform 0.3s ease;
+  }
+
+  .logo-container:hover .logo-svg {
+    transform: translateY(-10px);
+  }
+
+  .logo-svg {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    transition: transform 0.3s ease;
+  }
+
+  .logo-svg .card {
+    transition: transform 0.3s ease;
+    transform-origin: center center;
+  }
+
+  .logo-svg .card:hover {
+    transform: scale(1.1);
+  }
+
+
+
+
+/* Organizar a lista em linha */
+.list-inline {
+  display: flex;
+  align-items: center;
+  gap: 1rem; /* Espaçamento entre os botões */
+  padding: 0;
+  list-style: none;
+}
+
+/* Remover margin dos itens */
+.list-inline-item {
+  margin: 0;
+}
+
+/* Estilizar os botões das lojas */
+.playstore-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid #333;
+  border-radius: 9999px;
+  background-color: #333;
+  padding: 0.625rem 1.5rem;
+  text-align: center;
+  color: rgba(255, 255, 255, 1);
+  outline: 0;
+  transition: all 0.2s ease;
+  text-decoration: none;
+  min-width: 180px; /* opcional: deixa todos com tamanho mínimo parecido */
+}
+
+/* Efeito no hover */
+.playstore-button:hover {
+  background-color: transparent;
+  color: rgba(0, 0, 0, 1);
+}
+
+/* Ícone nos botões */
+.playstore-button .icon {
+  height: 1.5rem;
+  width: 1.5rem;
+}
+
+/* Textos dentro dos botões */
+.playstore-button .texts {
+  margin-left: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  line-height: 1;
+}
+
+.playstore-button .text-1 {
+  margin-bottom: 0.25rem;
+  font-size: 0.75rem;
+  line-height: 1rem;
+}
+
+.playstore-button .text-2 {
+  font-weight: 600;
+}
+
+/* Estilizar o botão do Windows */
+.btn-rounded-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid #000;
+  border-radius: 9999px;
+  background-color: rgba(0, 0, 0, 1);
+  padding: 0.625rem 1.5rem;
+  text-align: center;
+  color: rgba(255, 255, 255, 1);
+  outline: 0;
+  transition: all 0.2s ease;
+  text-decoration: none;
+  font-weight: 600;
+  min-width: 180px; /* mesmo tamanho dos outros */
+}
+
+/* Hover do botão Windows */
+.btn-rounded-icon:hover {
+  background-color: transparent;
+  color: rgba(0, 0, 0, 1);
+}
+
+/* Ícone no botão Windows */
+.btn-rounded-icon i {
+  margin-right: 0.5rem;
+  font-size: 1.5rem;
+}
+
+.slot-container {
+		display: inline-block;
+		position: relative;
+		width: 100px;
+		height: 40px;
+		vertical-align: middle;
+		margin-left: 4px; /* ajuste fino de distância do texto */
+	}
+
+	.slot-svg .ball {
+		cursor: pointer;
+		transition: transform 0.4s ease-in-out;
+		transform-origin: center;
+	}
+
+	.ball1:hover {
+		transform: translate(-8px, -8px);
+	}
+
+	.ball2:hover {
+		transform: translate(0px, -12px);
+	}
+
+	.ball3:hover {
+		transform: translate(8px, -8px);
+	}
+
+  .mobile-text {
+    display: none;
+  }
+  
+  .desktop-text {
+    display: block;
+  }
+  
+  @media (max-width: 768px) {
+    .mobile-text {
+      display: block;
+    }
+  
+    .desktop-text {
+      display: none;
+    }
+  }
+  
+
+
